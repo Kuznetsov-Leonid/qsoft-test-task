@@ -1,0 +1,155 @@
+@mixin block_center {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+.Container{
+    max-width: 1168px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+@media (max-width: 1140px) {
+    .Container{
+        max-width: 1168px;
+    }
+}
+@media (max-width: 992px) {
+    .Container{
+        max-width: none;
+    }
+}
+@media (max-width: 767px) {
+    .Container{
+        max-width: none;
+    }
+}
+
+.Header{
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+}
+@media (max-width: 1140px){
+    .Header{
+        height: 80px;
+    }
+}
+@media (max-width: 992px){
+    .Header{
+        height: 80px;
+    }
+}
+@media (max-width: 767px){
+    .Header{
+        height: 105px;
+        padding-bottom: 0rem;
+    }
+}
+
+.Header__logo{
+    @include block_center();
+    height: 80px;
+    .Header__logo__block{
+        width: 100%;
+        .Header__logo__Img{
+            width: 135px;
+            height: 30px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .Header__logo{
+        height: 70px;
+    }
+}
+
+.Header__input{
+    @include block_center();
+    height: 80px;
+    .Header__input__block{
+        width: 100%;
+    }
+}
+@media (min-width: 1155px){
+    .Header__input__block{
+        input{
+            width: 768px;
+        }
+    }
+}
+@media (max-width: 1155px){
+    .Header__input__block{
+        input{
+            width: 344px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .Header__input{
+        display: none;
+    }
+}
+
+.Header__usr{
+    .Header__togal__block{
+        height: 80px;
+        float: right;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        display: none;
+    }
+    .Header__usr__block{
+        float: right;
+        padding-left: 19px;
+        height: 80px;
+        padding-bottom: 0.5rem;
+        padding-top: 1.3rem;
+        border-left: solid #EBEBF1 1px;
+    }
+    .usr__name{
+        margin: 0px 10px;
+        color: #768298;
+    }
+    .usr__avatar{
+        .usr__avatar__img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    @media (max-width: 767px){
+        .Header__usr__block{
+            display: none;
+        }
+        .Header__togal__block{
+            display: block;
+            height: auto;
+            padding-top: 1rem;
+            padding-bottom: 1.8rem;
+        }
+    }
+    
+}
+
+.Header__togal__input{
+    display: none;
+}
+@media (max-width: 767px){
+    .Header__togal__input{
+        display: block;
+        position: relative;
+        bottom: 15px;
+        border-top: #BBC4D6 solid 1px;
+    }
+}
+.row{
+    // border: solid red 1px;
+    box-sizing: border-box;
+    .col{
+        // border: solid black 1px;
+    }
+}
