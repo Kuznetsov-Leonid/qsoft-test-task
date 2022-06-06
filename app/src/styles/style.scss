@@ -1,3 +1,5 @@
+/*------------------MIXINS---------------------*/
+
 @mixin block_center {
     display: flex;
     align-items: center;
@@ -5,6 +7,9 @@
     padding-bottom: 0.5rem;
     box-sizing: border-box;
 }
+
+/*------------------CONTAINER---------------------*/
+
 .Container{
     max-width: 1168px;
     margin: 0px auto;
@@ -25,6 +30,8 @@
         max-width: none;
     }
 }
+
+/*------------------HEADER---------------------*/
 
 .Header{
     background: #FFFFFF;
@@ -73,6 +80,12 @@
     .Header__input__block{
         width: 100%;
     }
+}
+input::placeholder {
+    color: #BBC4D6;
+    background: url(../img/Ellipse.png) no-repeat;
+    background-position: 2px;
+    text-indent: 30px;
 }
 @media (min-width: 1155px){
     .Header__input__block{

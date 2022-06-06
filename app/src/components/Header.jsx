@@ -2,10 +2,30 @@ import React from "react";
 import { Row, Col, Form } from 'react-bootstrap';
 import Logo from '../img/Logo.png';
 import Avatar from '../img/Avatar.png';
-import SearchIcon from '@mui/icons-material/Search';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 
 const Header = () => {
+
+    /**
+     * 
+     * @param {style} props 
+     * @returns input search
+     */
+    const InputForm = (props) => {
+        return(
+            <>
+                <Form>
+                    <Form.Control 
+                        style       = {props.style}
+                        className   = "input__aria"
+                        type        = "search" 
+                        placeholder = "Найти..." 
+                    />
+                </Form>
+            </>
+        );
+    }
+
     return(
         <>
             <header className = "Header">
@@ -26,13 +46,7 @@ const Header = () => {
                             style={{'padding':'0'}}>
                             <div className="Header__input__block">
                                 {/* при уборке формы вёрстка хедера не ломается */}
-                                <Form>
-                                    <Form.Control 
-                                        className   = "input__aria"
-                                        type        = "email" 
-                                        placeholder = "Enter email" 
-                                    />
-                                </Form>
+                                <InputForm className = 'input__aria'/>
                             </div>
                         </Col>
                         <Col className = "Header__usr">
@@ -59,13 +73,10 @@ const Header = () => {
                     </Row>
                     <Row >
                         <Col className = "Header__togal__input">
-                            <div >
-                                <Form>
-                                    <Form.Control 
-                                        style       = {{'border':'none'}}
-                                        type        = "email" 
-                                        placeholder = "Enter email" />
-                                </Form>
+                            <div>
+                                <InputForm 
+                                    style = {{'border':'none'}}
+                                />
                             </div>
                         </Col>
                     </Row>
